@@ -1,4 +1,4 @@
-baseURL = 'https://goran.krampe.se/'
+baseURL = 'https://gokr.github.io/roadslesstaken/'
 languageCode = 'en'
 title = 'Roads Less Taken'
 theme = 'hugo-coder'
