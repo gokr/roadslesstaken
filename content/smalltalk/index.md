@@ -9,6 +9,5 @@ Today in 2019 I would say **Pharo is the leading open source Smalltalk dialect**
 
 The elegance of Smalltalk, through its careful design and very powerful toolset - still today makes it a compelling tool for many tasks. The [Design Principles Behind Smalltalk](/smalltalk/design-principles-behind-smalltalk.html)-article from Byte magazine 1981 is a must read for anyone seriously interested in programming languages.
 
-{% blockquote Dan Ingalls, Byte magazine 1981 %}
-<strong>Good Design:</strong> A system should be built with a minimum set of unchangeable parts; those parts should be as general as possible; and all parts of the system should be held in a uniform framework.
-{% endblockquote %}
+> <strong>Good Design:</strong> A system should be built with a minimum set of unchangeable parts; those parts should be as general as possible; and all parts of the system should be held in a uniform framework.
+> — Dan Ingalls, Byte magazine 1981

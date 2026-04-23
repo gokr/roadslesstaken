@@ -15,7 +15,7 @@ But at some point I just decided that, nah, source distros are huge time sinks. 
 
 <!--more--> 
 
-My main laptop is a [Lenovo X220](http://goran.krampe.se/category/x220/) with a Samsung 840 Pro SSD disk. Its easily the **best laptop I have ever had** and runs Linux extremely well, and it has a **REAL DAMN KEYBOARD**.
+My main laptop is a [Lenovo X220](http://goran.krampe.se/categories/x220/) with a Samsung 840 Pro SSD disk. Its easily the **best laptop I have ever had** and runs Linux extremely well, and it has a **REAL DAMN KEYBOARD**.
 
 Sleeping works, just close the lid and open it to wake up. External screen works perfectly, I have an external monitor in addition to the laptop with a shared desktop - just plug in (or out) the cord and Ubuntu detects and adjusts. Just move windows between them and so on. And the little function keys for screen brightness, the little LED light, sound volume buttons etc - all seem to work fine.
 

@@ -16,7 +16,7 @@ A year ago I wrote an article trying to round up [new languages since year 2000]
 
 [Nim](http://nim-lang.org) was born somewhere around 2006-ish and is clearly a very serious language to consider, but is going suspiciously under the radar. Having reviewed this language more closely (and still doing so) I can safely say that **for me** it actually easily **tops this list**.
 
-I have already posted [a few articles about Nim](http://goran.krampe.se/category/nim), but this one is meant as a _followup_ to [that article](http://goran.krampe.se/2013/09/07/new-languages-this-century) trying to make amends :).
+I have already posted [a few articles about Nim](http://goran.krampe.se/categories/nim), but this one is meant as a _followup_ to [that article](http://goran.krampe.se/2013/09/07/new-languages-this-century) trying to make amends :).
 
 _**NOTE:** Technically [Nim](http://nim-lang.org) is still called "Nimrod" up to and including the [0.9.6-release that was done yesterday](http://nim-lang.org/news.html#Z2014-10-19-version-0-9-6-released). But for the upcoming 0.10.0 and onward its **Nim**. Short and sweet._
 
@@ -52,9 +52,8 @@ But **still** this language is **getting to me**, against all odds. I can't even
 
 Andreas Rumpf, the designer and main implementor of the language and compiler (written in Nim of course) has an interesting balance between enabling very advanced compiler techniques and still - at least as it seems - maintain a language that is actually usable by "normal people".
 
-{% blockquote Andreas Rumpf %}
-"Nimrod is a statically typed programming language that tries to give the programmer ultimate power without compromises on runtime efficiency."
-{% endblockquote %}
+> "Nimrod is a statically typed programming language that tries to give the programmer ultimate power without compromises on runtime efficiency."
+> — Andreas Rumpf
 
 Andreas has borrowed heavily from a range of different languages: Modula 3, Delphi, Ada, C++, Python, Lisp, Oberon. Notably several from "Pascal descent" and dare I also say, Windows centered languages? Just a guess, Andreas works primarily on Windows I think.
 

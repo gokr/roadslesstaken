@@ -59,9 +59,8 @@ Now we have a koch tool written in Nim compiled with a slightly older Nim compil
 
 So we **run koch with the boot command**, and we throw `-d:release` into the mix. This is an option for the compiler, and its a good option to be aware of if you are doing some test benchmarks learning Nim - because if you leave it out Nim will be **MUCH** slower, since the default is to include debugging stuff in the executable. Now, what does the boot command do? 
 
-{% blockquote Albert Einstein %}
-Insanity: doing the same thing over and over again and expecting different results.
-{% endblockquote %}
+> Insanity: doing the same thing over and over again and expecting different results.
+> — Albert Einstein
 
 Koch is just 300 lines of code and its a fairly interesting example of a tool written in Nim doing "shell stuff". But let's look at the **Heart Of Gold** at line 155 here:
 

@@ -8,7 +8,7 @@ categories:
 - Squeak
 - Tirade
 ---
-Two years ago I ended up creating [Tirade](http://goran.krampe.se/2009/03/16/tirade-a-file-format-for-smalltalkers/) - a new "file format" for Smalltalkers. Or rather, a way to serialize stuff into a sequence of Smalltalk messages with literals as arguments. I have written a [few blog articles about Tirade](http://goran.krampe.se/category/tirade) so I will not go into details in this one.
+Two years ago I ended up creating [Tirade](http://goran.krampe.se/2009/03/16/tirade-a-file-format-for-smalltalkers/) - a new "file format" for Smalltalkers. Or rather, a way to serialize stuff into a sequence of Smalltalk messages with literals as arguments. I have written a [few blog articles about Tirade](http://goran.krampe.se/categories/tirade) so I will not go into details in this one.
 
 One thing that has been disturbing with Tirade is that I wanted it to be the main format for serializing Deltas, the new implementation of "21st Century ChangeSets". This means I want Tirade to handle Smalltalk source code in the best possible way. Ideally I would want the Tirade file to be editable in a text editor if I wanted, and not being broken by that.
 

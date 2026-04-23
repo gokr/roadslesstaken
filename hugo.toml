@@ -18,9 +18,14 @@ style = 'dracula'
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
+[markup.goldmark.parser]
+attribute = true
 [markup.tableOfContents]
 endLevel = 4
 startLevel = 2
+
+[outputs]
+home = ['HTML', 'RSS', 'JSON']
 
 [params]
 author = 'Göran Krampe'
@@ -71,8 +76,18 @@ weight = 1
 url = 'posts/'
 
 [[menu.main]]
-name = 'Categories'
+name = 'Archive'
 weight = 2
+url = 'archive/'
+
+[[menu.main]]
+name = 'Search'
+weight = 3
+url = 'search/'
+
+[[menu.main]]
+name = 'Categories'
+weight = 4
 url = 'categories/'
 
 [[menu.main]]

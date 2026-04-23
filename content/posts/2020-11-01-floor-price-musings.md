@@ -7,7 +7,7 @@ categories:
 - Ethereum
 - Programming
 ---
-I have already written [three different articles](http://goran.krampe.se/category/core) explaining how CORE floor price can be calculated. But just a day or two back the CORE team decided that using the floor price concept in communcation doesn't work out very well. Why? Because a LOT of people just can't seem to understand it properly and keep perpetuating wrong conclusions around it. In short - people can't understand math :)
+I have already written [three different articles](http://goran.krampe.se/categories/core) explaining how CORE floor price can be calculated. But just a day or two back the CORE team decided that using the floor price concept in communcation doesn't work out very well. Why? Because a LOT of people just can't seem to understand it properly and keep perpetuating wrong conclusions around it. In short - people can't understand math :)
 
 A list of common misconceptions are:
 

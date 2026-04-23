@@ -13,10 +13,9 @@ And going all the way back to 1994-2011 I worked as a software developer consult
 
 This blog’s name _“Roads Less Taken”_ refers to the poem called _“The Road Not Taken”_ by Robert Frost which describes how a traveler in a forest decides to take one of the two roads in front of him – “the one less traveled by”. Here you can find the full [poem](http://en.wikipedia.org/wiki/The_Road_Not_Taken), I especially like that last part:
 
-{% blockquote Robert Frost, 1916  %}
-Two roads diverged in a wood, and I--
-I took the one less traveled by,
-And that has made all the difference.
-{% endblockquote %}
+> Two roads diverged in a wood, and I--
+> I took the one less traveled by,
+> And that has made all the difference.
+> — Robert Frost, 1916
 
 I think that sets the mood for what I would like to write about in software development on this blog, namely that you can gain a lot by choosing **“Roads”** (think tools, methods, interests and techniques) that are **“Less Taken”** (not among the most popular that everyone else uses). Daring to be different and choosing the **right tool for the job**. Or at least open your mind and learn. :)

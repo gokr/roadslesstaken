@@ -50,7 +50,7 @@ But if you do decide to give it a spin (and a lot of people do these days), then
 The more detailed path for enlightenment looks like this:
 
 1. Browse [Nim-lang.org](http://nim-lang.org), and [get it](http://nim-lang.org/download.html). You may also want to get IDE support.
-2. Take a look at the [Learn](http://nim-lang.org/learn.html) section, [all my Nim articles](http://goran.krampe.se/category/nim) can also be reached at the bottom list of article links.
+2. Take a look at the [Learn](http://nim-lang.org/learn.html) section, [all my Nim articles](http://goran.krampe.se/categories/nim) can also be reached at the bottom list of article links.
 3. Log into #nim channel on freenode, lots of people willing to help! Or use any [other means of communicating with the community](http://nim-lang.org/community.html).
 
 

@@ -19,15 +19,13 @@ and [spry-lang.net](http://spry-lang.net). The main site is [sprylang.org](http:
 ### Why spry? 
 Well, to be honest I was just surfing for synonyms to various "nice words" and I stumbled over it. I was leaning towards "fleck" but a native english speaking friend talked me out of it. :) Spry jumped up from some thesarus site and... it just feels nice. And the meaning of spry is also very fitting IMHO:
 
-{% blockquote Merriam-Webster Dictionary %}
-Spry: full of life and energy
-{% endblockquote %}
+> Spry: full of life and energy
+> — Merriam-Webster Dictionary
 
 One of the primary goals of Spry is to be a fully 100% live programming language and environment.
 
-{% blockquote The American Heritage Roget’s Thesaurus %}
-Spry: Moving or performing quickly, lightly, and easily
-{% endblockquote %}
+> Spry: Moving or performing quickly, lightly, and easily
+> — The American Heritage Roget’s Thesaurus
 
 ...and yeah, the agility and nimbleness is also a big part. Given the influence from "older" languages like Smalltalk, Rebol, Lisp and Forth - I can also see some sense in the typical use of the adjective spry - namely as pertaining to someone elderly! That's fine with me.
 

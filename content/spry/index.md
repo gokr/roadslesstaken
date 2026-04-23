@@ -9,4 +9,4 @@ The language is called [Spry](http://sprylang.se) but was initially named Ni (as
 
 Spry is a dynamically typed, 100% live, homoiconic minimalistic language with pervasive use of closures for control structures, non local returns, Smalltalk and Rebol inspired semantics and syntax, and soon to come pretty good OOP support. It's a pure interpreter but can very easily mix with Nim for maximum speed.
  
-I have written [several articles on Spry](/category/spry) documenting my adventures. Everything else is found on the [Spry homepage](http://sprylang.se).
+I have written [several articles on Spry](/categories/spry) documenting my adventures. Everything else is found on the [Spry homepage](http://sprylang.se).

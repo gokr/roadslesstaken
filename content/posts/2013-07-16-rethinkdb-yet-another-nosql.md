@@ -27,9 +27,8 @@ So where to go from here? Riak is great, but I want more consistency guarantees 
 
 And in case you wonder - MongoDB is not for me, I know... some people love it, but let me quote (and there are many other sources too) the internetz:
 
-{% blockquote Lucian http://www.tbray.org/ongoing/When/201x/2013/05/06/Tab-Sweep-Tech#c1367917902.203869 %}
-I would suggest you don't try to use MongoDB in a high-availability mode (or at all if you can help it). It's quite buggy, lacks useful features and isn't in fact Consistent (even though its design might suggest it is). It's just a bad database with too much marketing :( There are a few decent-looking Consistent databases out there (HBase, Couchbase, RethinkDB, Hyperdex) and several decent Eventually Consistent databases (Cassandra, Riak, Dynamo).
-{% endblockquote %}
+> I would suggest you don't try to use MongoDB in a high-availability mode (or at all if you can help it). It's quite buggy, lacks useful features and isn't in fact Consistent (even though its design might suggest it is). It's just a bad database with too much marketing :( There are a few decent-looking Consistent databases out there (HBase, Couchbase, RethinkDB, Hyperdex) and several decent Eventually Consistent databases (Cassandra, Riak, Dynamo).
+> — Lucian http://www.tbray.org/ongoing/When/201x/2013/05/06/Tab-Sweep-Tech#c1367917902.203869
 
 So Google to the rescue, there must be more consistent NoSQL dbs out there...
 

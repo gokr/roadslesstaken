@@ -98,9 +98,7 @@ So if you try to be minimal you need careful design - and one of the areas in Go
 
 Only one loop keyword and that is "for"? Ok, perhaps I can buy that. No generics in a manifest statically typed language? So they added special case generic array and hashmaps, but that only removes the casting pain for these builtin collections. Mmm, ok. All in all I hesitate regarding Go and I did find someone managing to put his finger on it:
 
-{% blockquote %}
-"So, where is Go supposed to fit? I'll gladly acknowledge Go is a far better C, with garbage collection. But the GC makes it unacceptable for the only types of problems I'd ever consider using C for. And if I'm willing to put up with a GC, I'd always prefer Java/Scala/Python/Lisp/Haskell over Go for any problem I can think of."
-{% endblockquote %}
+> "So, where is Go supposed to fit? I'll gladly acknowledge Go is a far better C, with garbage collection. But the GC makes it unacceptable for the only types of problems I'd ever consider using C for. And if I'm willing to put up with a GC, I'd always prefer Java/Scala/Python/Lisp/Haskell over Go for any problem I can think of."
 
 At the same time Go seems to be attracting developers from the Ruby/Python camp that are looking for higher performance and better support for concurrency - instead of people from the Java camp sick of complexity, as some might have predicted.
 
@@ -130,28 +128,23 @@ If all these features don't make your head spin, well, then perhaps you are a se
 
 This interesting quote positions Rust vs Go etc:
 
-{% blockquote %}
-"Rust is basically ML + C's lovechild. Sophisticated type inference, mostly pure variables, pattern matching lambda functions, a few other FP goodies. But it's also a fairly clean imperative language if you care to use it like that. Generics, mutable variables, {}; syntax, pointers, etc. Also, more fundamentally, I see D, OCaml, and Rust as occupying a "let's be clean" kind of space.
-I see Go as occupying a "let's be scruffy" space; not really pushing the language state of the art, focused on industrial work; it's like a type-safer & compiled python, afaict. It doesn't really strive to push the state of the art, it seeks to solidify certain well-known taken ground in programming language design, and to be really focused on that."
-{% endblockquote %}
+> "Rust is basically ML + C's lovechild. Sophisticated type inference, mostly pure variables, pattern matching lambda functions, a few other FP goodies. But it's also a fairly clean imperative language if you care to use it like that. Generics, mutable variables, {}; syntax, pointers, etc. Also, more fundamentally, I see D, OCaml, and Rust as occupying a "let's be clean" kind of space.
+> I see Go as occupying a "let's be scruffy" space; not really pushing the language state of the art, focused on industrial work; it's like a type-safer & compiled python, afaict. It doesn't really strive to push the state of the art, it seeks to solidify certain well-known taken ground in programming language design, and to be really focused on that."
 
 And from Reddit, let me include a longer very good quote:
-{% blockquote ais523 http://www.reddit.com/r/programming/comments/10yb5q/rust_refining_traits_and_impls/c6hybv6 %} 
-The hardest part of memory management in C is working out when allocated memory should be freed again. As such, people come up with patterns to give rules for when they should free memory. Rust basically takes some of the most popular patterns, and bakes them into the language itself:
-
-Something very common in library functions is "I got this pointer from somewhere else; I'm not going to worry about how it's allocated and just use it". This is Rust's &T; you can do what you like with it apart from keeping copies of the pointer itself (because for all you know, it might be freed immediately after you return).
-
-Another common pattern is "ownership semantics", where the idea is that you designate a function/struct/whatever responsible for the lifetime of the pointer, and everything that no longer needs the pointer has to either pass it to something else (which takes ownership of it), or free it. This is Rust's ~T, for the owner. (And if the owner passes temporary copies of it to other functions to look at, they get an &T.)
-
-Finally, for pointers with complex usage, many projects will simply use garbage collection or reference counting. This is Rust's @T, which basically just tells the compiler to use a garbage collector on the pointer, and then you can pretty much do what you like with it (as in Java or another garbage-collected language).
-{% endblockquote %}
+> The hardest part of memory management in C is working out when allocated memory should be freed again. As such, people come up with patterns to give rules for when they should free memory. Rust basically takes some of the most popular patterns, and bakes them into the language itself:
+>
+> Something very common in library functions is "I got this pointer from somewhere else; I'm not going to worry about how it's allocated and just use it". This is Rust's &T; you can do what you like with it apart from keeping copies of the pointer itself (because for all you know, it might be freed immediately after you return).
+>
+> Another common pattern is "ownership semantics", where the idea is that you designate a function/struct/whatever responsible for the lifetime of the pointer, and everything that no longer needs the pointer has to either pass it to something else (which takes ownership of it), or free it. This is Rust's ~T, for the owner. (And if the owner passes temporary copies of it to other functions to look at, they get an &T.)
+>
+> Finally, for pointers with complex usage, many projects will simply use garbage collection or reference counting. This is Rust's @T, which basically just tells the compiler to use a garbage collector on the pointer, and then you can pretty much do what you like with it (as in Java or another garbage-collected language).
+> — ais523 http://www.reddit.com/r/programming/comments/10yb5q/rust_refining_traits_and_impls/c6hybv6
 
 I do like these ideas and I think they would work wonders in communication between concurrent threads and more. But my head still easily has a hard time parsing the code. A final quote yet again warning about complexity:
 
-{% blockquote %}
-"The common liturgy of language design is that x feature makes development easier, less error prone, safer, etc. Nearly always, the precise way in which x feature does this is as clear as a bell. But somehow, as we multiply the number of features, something truly destructive starts to happen. It's not just diminishing returns . . .
-I think about a language like C++. I can see the reasons for every single thing in it. I can understand the arguments for why this or that is a good thing. But it is perilously easy to write very unmaintainable code in this language, and to understand why, I think we have to get beyond the usual debates (static vs. dynamic, functional vs. OO, compiled vs. interpreted, etc). Small vs. large might be one place to start."
-{% endblockquote %}
+> "The common liturgy of language design is that x feature makes development easier, less error prone, safer, etc. Nearly always, the precise way in which x feature does this is as clear as a bell. But somehow, as we multiply the number of features, something truly destructive starts to happen. It's not just diminishing returns . . .
+> I think about a language like C++. I can see the reasons for every single thing in it. I can understand the arguments for why this or that is a good thing. But it is perilously easy to write very unmaintainable code in this language, and to understand why, I think we have to get beyond the usual debates (static vs. dynamic, functional vs. OO, compiled vs. interpreted, etc). Small vs. large might be one place to start."
 
 Still, I think Rust is going places as "a new C++". Mozilla is pushing hard, the community is boiling, the developers seem sharp and although the language is quite immature - **I don't see any other modern strong competitor fighting for the same spot**. C++ is not modern and no, I don't think D will take off in any substantial way.
 

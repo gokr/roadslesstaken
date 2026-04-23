@@ -39,7 +39,7 @@ Yep! Read on to find out...
 
 ## Nim
 
-I have written [extensively about Nim](http://goran.krampe.se/category/nim) before, and there is even [a blog article](http://disconnected.systems/nim-on-arduino/) showing that Nim can even run on an Arduino UNO! To Nimmers this isn't surprising, Nim compiles to performant C and if you turn off the GC etc, Nim can fit wherever C can fit.
+I have written [extensively about Nim](http://goran.krampe.se/categories/nim) before, and there is even [a blog article](http://disconnected.systems/nim-on-arduino/) showing that Nim can even run on an Arduino UNO! To Nimmers this isn't surprising, Nim compiles to performant C and if you turn off the GC etc, Nim can fit wherever C can fit.
 
 But that article used the low level mechanics of interfacing with C/C++ and did not use [c2nim](https://github.com/nim-lang/c2nim), the **excellent wrapper generation tool** written in Nim by Andreas Rumpf, the primary author of Nim.
 

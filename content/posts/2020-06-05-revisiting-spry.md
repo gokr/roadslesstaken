@@ -8,7 +8,7 @@ categories:
 - Languages
 - Programming
 ---
-After a period of slower progress I got reignited regarding [Spry](https://sprylang.se). So far I have written [a lot of articles](http://goran.krampe.se/category/spry/) about Spry, and during this time things have evolved and changed.
+After a period of slower progress I got reignited regarding [Spry](https://sprylang.se). So far I have written [a lot of articles](http://goran.krampe.se/categories/spry/) about Spry, and during this time things have evolved and changed.
 
 So I am now trying to "clean house" on where Spry stands today. This sweep through the old articles is a first step, then I will update the language manual to be 100% in sync with the implementation.
 
