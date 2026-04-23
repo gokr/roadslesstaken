@@ -17,14 +17,17 @@
   var searchInput = document.getElementById('search-input');
   var resultsList = document.getElementById('search-results');
   var fuse = null;
-  var baseOrigin = window.location.origin;
-  var basePath = '{{ strings.TrimSuffix "/" .Site.BaseURL }}'.replace(/^https?:\/\/[^/]+/, '');
+  var basePath = {{ (strings.TrimSuffix "/" .Site.BaseURL | urls.Parse).Path }};
 
   fetch('{{ "index.json" | relURL }}')
     .then(function(res) { return res.json(); })
     .then(function(data) {
       data.forEach(function(item) {
-        item.permalink = item.permalink.replace(/^https?:\/\/[^/]+/, '');
+        var path = item.permalink.replace(/^https?:\/\/[^/]+/, '');
+        if (basePath && !path.startsWith(basePath + '/')) {
+          path = basePath + path;
+        }
+        item.permalink = path;
       });
       fuse = new Fuse(data, {
         keys: ['title', 'summary', 'content'],

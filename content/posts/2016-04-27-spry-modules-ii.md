@@ -72,7 +72,7 @@ It would be pretty nice if we could unify storage of Modules (Spry nodes in gene
 
 I am leaning towards the latter, even though it's **obviously insane**.
 
-![You](/spry/crazy.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/crazy.jpg" alt="You" style="display:block; margin:0 auto;" >}}
 
 So... if I extend Node with an optional string containing the "all whitespace and comments" right before the Node itself - then we should be able to serialize/deserialize without losses, except for anything coming after the very last node :). Default whitespace is a single space, we represent that as `nil`. And sure, wasting a full reference in every Node? I agree, completely nuts, but perhaps we can somehow magically avoid that later on. It still is too tempting to try!
 
@@ -87,7 +87,7 @@ In earlier articles I introduced the concept of scoped words, `.x` and `..x`, bu
 * `..x` means **somewhere outside of the closest enclosing Map**. The definition if that we can experiment with later.
 * `_x` means **just like .x but private**
 
-![Underscore](/spry/underscore.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/underscore.jpg" alt="Underscore" style="display:block; margin:0 auto;" >}}
 
 ## Next step
 

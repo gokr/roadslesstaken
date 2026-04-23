@@ -12,7 +12,7 @@ After the [conundrum with my Intel 320 SSD](/2013/01/02/ssd-nightmare) I did som
 
 <!--more--> 
 
-![Not](/pics/pic3.jpg){ style="float:left; margin:0 1em 1em 0;"}
+{{< img src="/pics/pic3.jpg" alt="Not" style="float:left; margin:0 1em 1em 0;" >}}
 
 The actual replacement was trivial, one normal screw to remove the lid on the side, pull out the old disk, move the plastic rails over to the new disk (just pull off and slide onto the new drive), add a piece of tape as a pull handle (to make it easy to remove) and slide it in. If it doesn't want to go in you need to flip the rails.
 

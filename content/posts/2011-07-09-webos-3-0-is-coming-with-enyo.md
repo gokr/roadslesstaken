@@ -19,12 +19,7 @@ No, I have never owned an iPhone but my previous phone was the Samsung Galaxy, a
 
 
 
-## [nggallery id=2]
-
-
-
-
-## WebOS
+## ## WebOS
 
 
 Having used the phone for a week or two some things stand out:

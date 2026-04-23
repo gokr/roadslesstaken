@@ -12,7 +12,7 @@ categories:
 ---
 Allen Wirfs-Brock [wrote down a bullet list](http://www.wirfs-brock.com/allen/posts/754) of what he thought actually made it possible for the Alan Kay team to [create Smalltalk](http://worrydream.com/EarlyHistoryOfSmalltalk/), and many other ground breaking things, at Xerox PARC in the 70s. Let's take a look at **his bullets one by one** and see how it applies to Spry and my puny little effort around it :)
 
-![Assume](/spry/assume.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/assume.jpg" alt="Assume" style="display:block; margin:0 auto;" >}}
 
 <!--more-->
 

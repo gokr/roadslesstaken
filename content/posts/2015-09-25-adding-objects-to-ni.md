@@ -13,7 +13,7 @@ categories:
 ---
 So... Ni has almost reached the point where I can see objects appearing. The following describes the design I **currently** have in mind, read it and tell me what you think so I can scrap it and start over ;)
 
-![Ni](/ni/ni.png){ style="float:right; margin:0 0 1em 1em;"}
+{{< img src="/ni/ni.png" alt="Ni" style="float:right; margin:0 0 1em 1em;" >}}
 
 <!--more-->
 

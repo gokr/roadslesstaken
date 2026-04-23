@@ -16,7 +16,7 @@ When writing Spry I am so far mainly ignoring performance. The general execution
 
 In this article I do some silly experiments around interpreter startup time and fooling around with 40 million element arrays. As usual, I am fully aware that the languages (Pharo Smalltalk, NodeJS, Python) I compare with a) have lots of other ways to do things b) may not have been used exactly as someone else would have done it. A truck load of salt required. Now... let's go!
 
-![The](/spry/thetruth.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/thetruth.jpg" alt="The" style="display:block; margin:0 auto;" >}}
 
 <!--more-->
 
@@ -81,7 +81,7 @@ user	0m0.028s
 sys	0m0.096s
 ```
 
-![Neat](/spry/neat.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/neat.jpg" alt="Neat" style="display:block; margin:0 auto;" >}}
 
 Of course Python can do lots of similar tricks, so I am not making any claims! But still very neat. And oh, we didn't even try comparing to Pharo here :) Startup times is definitely not a strength of Smalltalk systems in general, typically due to lack of minimal images etc.
 
@@ -124,7 +124,7 @@ Spry with activation record reuse:
 
 Ehum...
 
-![Can](/spry/win.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/win.jpg" alt="Can" style="display:block; margin:0 auto;" >}}
 
 **NOTES**
 
@@ -133,7 +133,7 @@ Ehum...
 * Spry... is slow :) But a bit of activation record reuse definitely improved it by 2x.
 * Python is definitely surprising me! Wow, especially **populating in 7 seconds and summing with lambda in 4? Impressive.**
 
-![Python](/spry/python.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/python.jpg" alt="Python" style="display:block; margin:0 auto;" >}}
 
 
 If we spend some time profiling Spry we can quickly conclude that the main bottleneck is the lack of a binding phase in Spry - or in other words - **every time we run a block, we lookup all words**! Unless I am reading the profile wrong I think the endless **lookups make up almost half the execution time**. So that needs fixing. And I also will move to a stackless interpreter down the line, and that should give us a bit more.
@@ -177,7 +177,7 @@ nimPrim("sum", true, 1):
 ```
 It's worth noting that almost all primitive words in Spry are written using this same pattern - so there are lots of examples to look at! Of course this is a bit of "cheating" but it's also interesting to see how easy it is for us to drop down to Nim in Spry. We create a new word bound to a primitive function in **exactly 6 lines of code**.
 
-![Spry](/spry/spry-speed.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/spry-speed.jpg" alt="Spry" style="display:block; margin:0 auto;" >}}
 
 So how fast is Spry using this primitive word? It sums up in **blazing 0.15 seconds, about 100x faster than Cog and 10x faster than NodeJS** for summing up. And yeah, even 2x faster than Python!
 

@@ -1,0 +1,8 @@
+{{- $src := .Get "src" -}}
+{{- $poster := .Get "poster" -}}
+{{- $width := .Get "width" | default "640" -}}
+{{- $base := urls.Parse site.BaseURL -}}
+{{- $basePath := strings.TrimSuffix "/" $base.Path -}}
+<video controls width="{{ $width }}" {{ with $poster }}poster="{{ $basePath }}{{ . }}"{{ end }}>
+  <source src="{{ $basePath }}{{ $src }}" type="video/webm">
+</video>

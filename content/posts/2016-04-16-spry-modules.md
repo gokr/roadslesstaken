@@ -12,7 +12,7 @@ categories:
 ---
 As discussed in [the previous article](http://goran.krampe.se/2016/04/09/spry-image-model/) I want Spry to have a trivially accessible persistence mechanism enabling something similar to the **Smalltalk image model**, but based on a database. The memory organisation in Spry is basically nested Maps. After dwelling a bit on the inevitable hard question about **modules and namespaces** I have decided on a design that I hope will turn out simple and reasonably powerful!
 
-![Modules](/spry/modules.jpg){ style="float:right; margin:0 0 1em 1em;"}
+{{< img src="/spry/modules.jpg" alt="Modules" style="float:right; margin:0 0 1em 1em;" >}}
 
 Smalltalk has a Dictionary holding all the globals forming "the roots" of the object memory. In Smalltalk this Dictionary is also itself a global variable accessible as `Smalltalk`, in other words `Smalltalk == (Smalltalk at: #Smalltalk)`. The primary use of `Smalltalk` is to hold all classes by name, so they are all reachable as globals. Obviously `Smalltalk` can also hold any kind of object (not just classes) as a global.
 
@@ -46,7 +46,7 @@ So how do we refer to things in different Modules? Obviously we can do it manual
 
 Finally, we face the issue of **imports**. Almost all programming languages use imports, often per class or file, but also per module. It's worth recognizing what **true purpose** they actually serve.
 
-![Autoimport](/spry/autoimport.jpg){ style="float:right; margin:0 0 1em 1em;"}
+{{< img src="/spry/autoimport.jpg" alt="Autoimport" style="float:right; margin:0 0 1em 1em;" >}}
 
 1. One use of them is to avoid typing long names in the actual code, but ... that would typically only be an issue if module names where.. say **very long** like `com.MyCoolCompany.ProjectX.Base.Common`, but they aren't in Spry, since we don't allow nesting nor do we want people to use Internet domain names like that.
 
@@ -59,7 +59,7 @@ Finally, we face the issue of **imports**. Almost all programming languages use 
 
 ## To sum it up...
 
-![No](/spry/noimports.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/noimports.jpg" alt="No" style="display:block; margin:0 auto;" >}}
 
 In my proposal for Squeak there were no imports either, the idea was to always have the full reference in the source code, but to let browsers "render them short" if the unqualified name still was unique in the image. In Spry I am opting for a slightly different approach:
 

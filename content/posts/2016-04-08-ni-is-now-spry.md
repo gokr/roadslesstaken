@@ -31,5 +31,5 @@ One of the primary goals of Spry is to be a fully 100% live programming language
 
 And hey, it's triple creamed too...
 
-![Triple](/spry/spry-triple.png){ style="display:block; margin:0 auto;"}
+{{< img src="/spry/spry-triple.png" alt="Triple" style="display:block; margin:0 auto;" >}}
 

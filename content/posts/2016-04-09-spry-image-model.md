@@ -15,7 +15,7 @@ In developing Spry - [renamed from Ni](/ni-is-now-spry) - I am getting closer to
 
 As a Smalltalker I dream "bigger" than just managing source code as text in files...
 
-<a href="http://www.azquotes.com/quote/847274" title="Kent Beck quote"><img src="http://www.azquotes.com/picture-quotes/quote-i-mean-source-code-in-files-how-quaint-how-seventies-kent-beck-84-72-74.jpg" alt="I mean, source code in files; how quaint, how seventies! - Kent Beck"></a>
+<a href="http://www.azquotes.com/quote/847274" title="Kent Beck quote">![I mean, source code in files; how quaint, how seventies! - Kent Beck](http://www.azquotes.com/picture-quotes/quote-i-mean-source-code-in-files-how-quaint-how-seventies-kent-beck-84-72-74.jpg)</a>
 
 Smalltalk uses the "image model" in which the system is alive and running all the time, the full development environment is also live together with your application, and we are in fact modifying object structures when we develop Smalltalk programs. We can also snapshot that object memory onto disk and fire it up somewhere else. Several Lisp implementations have used a similar approach I think.
 

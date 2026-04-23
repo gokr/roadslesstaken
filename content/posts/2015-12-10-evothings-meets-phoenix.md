@@ -13,13 +13,13 @@ categories:
 - IoT
 - Programming
 ---
-![Evothings](/evothings/evothings.png){ style="float:left; margin:0 1em 1em 0;"}
+{{< img src="/evothings/evothings.png" alt="Evothings" style="float:left; margin:0 1em 1em 0;" >}}
 
 I have just started working at [Evothings](https://evothings.com)!
 
 It's a fun gang making slick development tools and libraries for building mobile IoT apps. Evothings is pushing the envelope on **really easy mobile development** focused on all the **new nifty IoT-devices** flooding us over the next few years.
 
-![Phoenix](/elixir/phoenix-small.png){ style="float:right; margin:0 0 1em 1em;"}
+{{< img src="/elixir/phoenix-small.png" alt="Phoenix" style="float:right; margin:0 0 1em 1em;" >}}
 
 In [my last article](http://goran.krampe.se/2015/10/27/elixir-booming/) I predicted [Elixir](http://www.elixir-lang.org) to become **big** and now that I am learning the Evothings tools I wanted to make an Evothings example that uses [Phoenix](http://phoenixframework.org), the Elixir web server framework, as a backend, using its channels mechanism for websocket communication.
 
@@ -42,7 +42,7 @@ Let's go!
 
 So what does the app do? The original Evothings sample app (that we intend to modify) scans for [BLE](https://en.wikipedia.org/wiki/Bluetooth_low_energy) (Bluetooth Low Energy) devices nearby and shows a list of them with some information. It's a very simple example of using your mobile to scan for devices like [Estimotes](http://estimote.com), [TI SensorTags](www.ti.com/sensortag) or any other device using BLE which modern mobile devices support. It looks like this:
 
-![BLE-Scan](/evothings/ble-scan-screenshot.png){ style="display:block; margin:0 auto;"}
+{{< img src="/evothings/ble-scan-screenshot.png" alt="BLE-Scan" style="display:block; margin:0 auto;" >}}
 
 The **twist we will add** is to let the app **send this information to a Phoenix server** reachable on the internet, onto a pubsub channel, and then subscribe to that channel in order to populate the list on screen. This means all the participating mobile devices will show the *union of all currently scanning mobiles*.
 
@@ -80,7 +80,7 @@ Time for **Step 2**, making our own variant of the "BLE Scan" example. We will c
 4. Let's change the name and title of the application. Press the `CODE` button and find the `index.html` file. Open it in any editor and change the title of the app on **line 10 and line 53** to "BLE Multiscan". Tada! Notice how it autoreloaded on your phone with the new name. The entry under `My Apps` should also have the new name.
 5. Feel free to press `Start Scan` on your mobile and see if you can find any BLE devices around, if **not... this whole exercise will get fairly boring :)**
 
-![Evothings](/evothings/evo57.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/evothings/evo57.jpg" alt="Evothings" style="display:block; margin:0 auto;" >}}
 
 ## Install Elixir and Phoenix
 Ok, so we are up and running with Evothings. You have successfully modified and run your mobile app.
@@ -146,7 +146,7 @@ $ exit
 ```
 Phew! But now we should have all we need to build a Phoenix application.
 
-![Phew](/evothings/phew.gif){ style="display:block; margin:0 auto;"}
+{{< img src="/evothings/phew.gif" alt="Phew" style="display:block; margin:0 auto;" >}}
 
 ## Create the Phoenix application
 
@@ -204,7 +204,7 @@ Note that **you can ignore this section**, but I just wanted to mention that you
 
 The Evothings app is just a directory and Evothings Studio can keep track of several apps under `My Apps` regardless of where they are on your hard drive. This means we can easily maintain the whole system in a single git repository.
 
-![Git](/evothings/git.jpg){ style="float:left; margin:0 1em 1em 0;"}
+{{< img src="/evothings/git.jpg" alt="Git" style="float:left; margin:0 1em 1em 0;" >}}
 
 If you are making the Phoenix app on a server then this advice does not really apply. I did all my coding on my laptop and then cloned it over to my public server in the end.
 
@@ -244,7 +244,7 @@ Above we can see that we create our own module called `ScanChannel` and use the 
 
 The first one basically says that the *topic:subtopic* "scan:public" is fine for anyone to join, we return the [tuple](http://elixir-lang.org/getting-started/basic-types.html#tuples) `{:ok, socket}` signifying all was fine. `:ok` is the syntax for an Elixir [atom](http://elixir-lang.org/getting-started/basic-types.html#atoms) which is basically the same as a symbol in Ruby or Smalltalk.
 
-![Toto](/evothings/toto.jpg){ style="float:left; margin:0 1em 1em 0;"}
+{{< img src="/evothings/toto.jpg" alt="Toto" style="float:left; margin:0 1em 1em 0;" >}}
 
 The second definition of join is nifty indeed. The underscores signify that we ignore those arguments, but the first parameter declaration is written as a [concatenation](http://elixir-lang.org/getting-started/basic-operators.html) of the string "scan:" with "something we ignore".
 
@@ -289,7 +289,7 @@ For our mobile app the following is not really needed, but Phoenix also serves a
 
 We can then verify we have a working channel by going to the Phoenix web application at [http://yourmachine.com:4000](http://yourmachine.com:4000) (or try my server at [https://padme.krampe.se:1443](https://padme.krampe.se:1443)) and press `CTRL-ALT-J` (typically) to check the console where it should say `Joined successfully`. Wohoo!
 
-![Notimpressed](/evothings/not-impressed.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/evothings/not-impressed.jpg" alt="Notimpressed" style="display:block; margin:0 auto;" >}}
 
 ## Phoenix channels in Evothings
 
@@ -300,7 +300,7 @@ Ok, but... now we want to make the **Evothings mobile app** talk to this channel
 
 The javascript client side code for Phoenix channels is `phoenix.js`. We need to include this library in our Evothings app, but it is [written in ES2015](https://babeljs.io/docs/learn-es2015/) (aka **ES6** or **ECMAScript 2015** or **ECMAScript 6**), the latest version of Javascript, and this [isn't fully supported by browsers yet](http://kangax.github.io/compat-table/es6/) so you must use a transpiler to make it work. Whatever one may think of the.. feature explosion in ES6 - it's probably wise to start learning it.
 
-![ES6](/evothings/es6.jpg){ style="float:left; margin:0 1em 1em 0;"}
+{{< img src="/evothings/es6.jpg" alt="ES6" style="float:left; margin:0 1em 1em 0;" >}}
 
 Our Evothings app is however written in plain ES5 so to avoid rewriting it we would like to use `phoenix.js` transpiled to ES5. Phoenix already has [Brunch](http://brunch.io) integrated which is a neat "build tool" for the web stuff, and it in turn is configured out-of-the-box to run the [Babel](https://babeljs.io) transpiler on all js files in order to compile any ES6 code to ES5 (good ole Javascript).
 
@@ -319,7 +319,7 @@ $ cp ./deps/phoenix/priv/static/phoenix.js ./app/libs/phoenix/
 ```
 ... and then we include it as a separate lib in `index.html`:
 
-{% codeblock lang:diff index.html https://raw.githubusercontent.com/evothings/evothings-multiscan/master/app/index.html?token=AAFaHgi2ekN2FbimNai_ICww8lNl28gjks5WeD9QwA%3D%3D file %}
+```diff
  	<script src="libs/jquery/jquery.js"></script>
  	<script src="libs/evothings/evothings.js"></script>
  	<script src="libs/evothings/ui/ui.js"></script>
@@ -327,11 +327,11 @@ $ cp ./deps/phoenix/priv/static/phoenix.js ./app/libs/phoenix/
  	<script src="app.js"></script>
  
  </head>
-{% endcodeblock %}
+```
 
 ... so we can require it at the top in `app.js`. Next up is modifying the application itself. Here are all modifications I made with explanations below.
 
-{% codeblock lang:diff app/app.js https://raw.githubusercontent.com/evothings/evothings-multiscan/master/app/app.js?token=AAFaHnXwbFZa2YwHD5N2uUl-8A4vPGC7ks5WeD86wA%3D%3D file %}
+```diff
  // JavaScript code for the BLE Scan example app.
 +Phoenix = require('phoenix')
  
@@ -529,7 +529,7 @@ $ cp ./deps/phoenix/priv/static/phoenix.js ./app/libs/phoenix/
  };
  
  app.initialize();
-{% endcodeblock %}
+```
 
 * In lines 31-55 we create our Phoenix socket and join a channel on it
 * In line 57-60 we register a handler for the topic "scan:device"
@@ -541,7 +541,7 @@ $ cp ./deps/phoenix/priv/static/phoenix.js ./app/libs/phoenix/
 
 **IMPORTANT: On line 34 you will need to stuff in your own ipname for your Phoenix server, and port. Or else you will connect to mine, which is of course just fine too :)**
 
-![Simple](/evothings/simple.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/evothings/simple.jpg" alt="Simple" style="display:block; margin:0 auto;" >}}
 
 No magic going on here really, we simply push any discovered device as JSON back to Phoenix on the topic. And we also show any incoming devices on the same topic on the display list.
 
@@ -561,7 +561,7 @@ openssl rsa -in ssl.key.bak -out ssl.key.nopass
 
 Then we can [configure Phoenix](http://www.phoenixframework.org/docs/configuration-for-ssl) to use this cert by modifying `config/dev.exs`:
 
-{% codeblock lang:diff config/dev.exs https://raw.githubusercontent.com/evothings/evothings-multiscan/master/config/dev.exs?token=AAFaHuW0x9i4BOKg2lQDg20-xfIASftoks5WeEGswA%3D%3D file %}
+```diff
  # watchers to your application. For example, we use it
  # with brunch.io to recompile .js and .css sources.
  config :multiscan, Multiscan.Endpoint,
@@ -577,7 +577,7 @@ Then we can [configure Phoenix](http://www.phoenixframework.org/docs/configurati
    cache_static_lookup: false,
    check_origin: false,
    watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
-{% endcodeblock %}
+```
 
 Of course you should use **your own host and port on line 5** above. And then I added a `run.sh` that looks like this:
 
@@ -590,7 +590,7 @@ mix phoenix.server
 ```
 ... so in the local directory `cert` you need to **place those three files from StartSSL**. Then just run it and with some luck it will start serve on HTTPS :)
 
-![Cert](/evothings/cert.jpg){ style="display:block; margin:0 auto;"}
+{{< img src="/evothings/cert.jpg" alt="Cert" style="display:block; margin:0 auto;" >}}
 
 
 ## Trying it out!
@@ -604,9 +604,9 @@ You can try this out in different ways:
 
 Start up at least two devices with the app, then if things work you should be able to start scanning on any of them and they should both quickly show the devices found. Note however that if others are using **my server** you will see their devices too. The following movie shows it working:
 
-{% video http://goran.krampe.se/evothings/multiscan.webm 640 480 http://goran.krampe.se/evothings/movie.png %} 
+{{< video src="/evothings/multiscan.webm" poster="/evothings/movie.png" width="640" >}} 
 
-![Impressed](/evothings/zlatan.png){ style="display:block; margin:0 auto;"}
+{{< img src="/evothings/zlatan.png" alt="Impressed" style="display:block; margin:0 auto;" >}}
 
 ## What next?
 

@@ -17,7 +17,7 @@ I am of course partial here - but the tool is really easy to use, doesn't force 
 
 Since we are specializing in the IoT space we have our office filled to the brink with toys... eh, I mean **IoT devices** of all kinds from all different vendors. Two IoT communication standards are particularly important in this space, and that's **BLE and MQTT**. I have already written three [blog](http://goran.krampe.se/2015/12/14/evothings-meets-phoenix/) [posts](https://evothings.com/evothings-does-mqtt-with-bluemix/) [around](https://evothings.com/evothings-does-mqtt-with-vernemq-or-emqtt/) MQTT using Evothings. Now I am instead focusing on BLE and particularly the **embedded device side of the story**.
 
-![LinkIt-ONE](/evothings/mediatek-linkit-one.png){ style="float:left; margin:0 1em 1em 0;"}
+{{< img src="/evothings/mediatek-linkit-one.png" alt="LinkIt-ONE" style="float:left; margin:0 1em 1em 0;" >}}
 
 
 This led me to round up a bunch of devices at the office that are fairly technically capable and have BLE support. The one I selected was the [LinkIt ONE development board](http://www.seeedstudio.com/wiki/LinkIt_ONE) from [MediaTek](http://labs.mediatek.com) & [Seeed Studio](http://www.seeedstudio.com). It's an insanely feature packed little board (GSM/GPRS, GPS, Wifi, BLE, sound output, SD card) with decent computing power (ARM7 EJ-S, 16Mb flash, 4Mb RAM) while still remaining in the "medium" embedded space I would say, still ruling out plain Linux and regular tools. I consider the <a href="https://www.raspberrypi.org">Raspberri Pi</a> or <a href="http://getchip.com">C.H.I.P</a> and similar machines to be in the "large" embedded space, they are real computers and you can basically use whatever you like to develop on those.
@@ -35,7 +35,7 @@ Yep! Read on to find out...
 
 <!--more-->
 
-![Nim](/nim/nim-logo2.png){ style="float:right; margin:0 0 1em 1em;"}
+{{< img src="/nim/nim-logo2.png" alt="Nim" style="float:right; margin:0 0 1em 1em;" >}}
 
 ## Nim
 

@@ -1,0 +1,31 @@
+.img-left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.img-left::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.img-right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.img-right::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.img-center {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.img-center img {
+  display: block;
+  margin: 0 auto;
+}
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
