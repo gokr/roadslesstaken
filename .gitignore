@@ -1,0 +1,4 @@
+public/
+resources/
+*.orig
+.hugo_build.lock

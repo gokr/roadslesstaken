@@ -1,0 +1,70 @@
+---
+date: '2009-01-01'
+title: ''
+---
+Lua vs Nim
+==========
+
+Lua:
+	+ Dynamically typed
+	+ Small language
+
+	- Quirky language
+	- Lacking in abstractions
+	- Can't utilize big memory
+
+Nim:
+	+ Very high performance
+	+ Threading and channels
+	+ Very clean language
+	+ Very high abstractions
+	+ Much more evolved standard library
+	+ Very good C/C++ integration
+	+ A language with a very good potential for "evolving friction free"
+
+	- Debugger not that well depeloped yet
+	- Lesser IDE support, but there are plugins for several
+	- A bit complex language, but every feature is well designed
+
+
+Which one fits Urho best?
+
+	- Lua is already integrated, to some extent.
+	- Nim offers a smoother and much more performant integration, since it compiles to C/C++
+	- Given Araq and c2nim I think we can quickly get a very good integration
+
+	Answer: Nim
+
+Which one fits our server side best?
+
+	- Nim has very good performance
+	- Nim's type system improves robustness
+	- Nim has async code and support for ZeroMQ etc
+	- Nim does threads and big memory
+
+	Answer: Nim
+
+
+
+	- Araq is looking for work, so we would have the super Nim hacker.
+	- Araq actually started with Lua, then Python, now Nimrod.
+
+LuaJIT is there, but...
+
+We need a wizard. I have found one.
+
+Plan:
+
+	- Get Andreas cracking on wrapping Urho3D for Nim
+	- Get Andreas to help me do the Squeak2Nim bridge
+
+Nim
+	- Is insanely fast
+	- Gives us even more optimal integration options
+	- Has much saner OO than LuaJIT
+	- We can still have LuaJIT in the picture
+
+
+Nim or Lua?
+	Debugger/IDE support for Nim... is not good :)
+

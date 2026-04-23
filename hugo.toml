@@ -1,0 +1,96 @@
+baseURL = 'https://gokr.github.io/roadslesstaken/'
+languageCode = 'en'
+title = 'Roads Less Taken'
+theme = 'hugo-coder'
+enableEmoji = true
+
+[pagination]
+pagerSize = 10
+
+[services]
+[services.disqus]
+shortname = 'roadslesstaken'
+
+[markup]
+[markup.highlight]
+noClasses = false
+style = 'dracula'
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.tableOfContents]
+endLevel = 4
+startLevel = 2
+
+[params]
+author = 'Göran Krampe'
+description = 'A blend of programming, boats and life.'
+keywords = 'blog,programming,smalltalk,nim,spry,developer'
+info = ['A blend of programming, boats and life.']
+avatarURL = 'images/gravatar.png'
+gravatar = 'goran@krampe.se'
+dateFormat = 'January 2, 2006'
+since = 2009
+colorScheme = 'auto'
+hideColorSchemeToggle = false
+maxSeeAlsoItems = 5
+toc = true
+
+[[params.social]]
+name = 'Github'
+icon = 'fa-brands fa-github fa-2x'
+weight = 1
+url = 'https://github.com/gokr/'
+
+[[params.social]]
+name = 'Twitter'
+icon = 'fa-brands fa-x-twitter fa-2x'
+weight = 2
+url = 'https://twitter.com/GoranKrampe/'
+
+[[params.social]]
+name = 'RSS'
+icon = 'fa-solid fa-rss fa-2x'
+weight = 3
+url = '/roadslesstaken/index.xml'
+rel = 'alternate'
+type = 'application/rss+xml'
+
+[taxonomies]
+category = 'categories'
+series = 'series'
+tag = 'tags'
+author = 'authors'
+
+[permalinks]
+posts = '/:year/:month/:day/:slug/'
+
+[[menu.main]]
+name = 'Blog'
+weight = 1
+url = 'posts/'
+
+[[menu.main]]
+name = 'Categories'
+weight = 2
+url = 'categories/'
+
+[[menu.main]]
+name = 'Smalltalk'
+weight = 3
+url = 'smalltalk/'
+
+[[menu.main]]
+name = 'Spry'
+weight = 4
+url = 'spry/'
+
+[[menu.main]]
+name = 'Nim'
+weight = 5
+url = 'nim/'
+
+[[menu.main]]
+name = 'About'
+weight = 6
+url = 'about/'
