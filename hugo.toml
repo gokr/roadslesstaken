@@ -1,4 +1,4 @@
-baseURL = 'https://gokr.github.io/roadslesstaken/'
+baseURL = 'https://goran.krampe.se/'
 languageCode = 'en'
 title = 'Roads Less Taken'
 theme = 'hugo-coder'
@@ -58,7 +58,7 @@ url = 'https://www.linkedin.com/in/gorankrampe/'
 name = 'RSS'
 icon = 'fa-solid fa-rss fa-2x'
 weight = 3
-url = '/roadslesstaken/index.xml'
+url = '/index.xml'
 rel = 'alternate'
 type = 'application/rss+xml'
 

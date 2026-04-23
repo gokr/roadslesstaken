@@ -1,7 +1,1 @@
-{{- $dest := .Destination -}}
-{{- if and (strings.HasPrefix $dest "/") (not (strings.HasPrefix $dest "//")) -}}
-  {{- $url := urls.Parse site.BaseURL -}}
-  {{- $path := strings.TrimSuffix "/" $url.Path -}}
-  {{- $dest = printf "%s%s" $path $dest -}}
-{{- end -}}
-<img src="{{ $dest | safeURL }}" {{ with .Text }}alt="{{ . }}"{{ end }} {{ with .Title }}title="{{ . }}"{{ end }} {{ with .Attributes }}{{ range $k, $v := . }}{{ $k }}="{{ $v }}"{{ end }}{{ end }}/>
+<img src="{{ .Destination | safeURL }}" {{ with .Text }}alt="{{ . }}"{{ end }} {{ with .Title }}title="{{ . }}"{{ end }} {{ with .Attributes }}{{ range $k, $v := . }}{{ $k }}="{{ $v }}"{{ end }}{{ end }}/>

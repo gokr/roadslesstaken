@@ -1,7 +1,4 @@
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
 {{- $style := .Get "style" -}}
-{{- $base := urls.Parse site.BaseURL -}}
-{{- $basePath := strings.TrimSuffix "/" $base.Path -}}
-{{- $url := printf "%s%s" $basePath $src -}}
-<img src="{{ $url }}" alt="{{ $alt }}" {{ with $style }}style="{{ . | safeCSS }}"{{ end }}>
+<img src="{{ $src }}" alt="{{ $alt }}" {{ with $style }}style="{{ . | safeCSS }}"{{ end }}>
